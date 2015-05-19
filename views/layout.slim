@@ -1,0 +1,13 @@
+doctype html
+html lang="en"
+  head
+    title== @title || "SCU"
+    meta charset="utf-8"
+    link rel="stylesheet" href="/styles.css"
+  body
+    header
+      h1 Students Directory
+	  - if session[:admin] == true
+		== slim :nav
+    section
+      == yield
